@@ -1,0 +1,263 @@
+* {
+    font-size: 20px;
+    font-family: Noto Sans KR, sans-serif;
+}
+
+
+
+/* 숨김 콘텐츠 */
+.a11y-hidden {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    clip-path: insert(50%);
+    margin: -1px;
+}
+
+body {
+    margin: 0;
+    background-color: #FFF;
+    padding: 0;
+    position: relative;
+}
+
+.header {
+    padding: 0;
+    position: relative;
+}
+
+.main {
+    height: 400px;
+}
+
+.footer {
+    background-color: #4F4F4F;
+    padding: 24px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.footer-logo {
+    margin: 0 0 16px;
+}
+
+
+.sns .sns-item {
+    list-style-type: none;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin: 16px;
+}
+
+.footer .company,
+.footer .address {
+    font-style: normal;
+    font-size: 12px;
+    line-height: 17px;
+    color: #F2F2F2;
+}
+
+
+.footer-menu li {
+    list-style-type: none;
+}
+
+
+
+/* 모바일 화면 */
+@media (max-width: 650px) {
+
+    .header-logo {
+        margin: 14px 0 14px 20px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .header-logo a {
+        line-height: 22px;
+        vertical-align: middle;
+    }
+
+    .navi {
+        position: fixed;
+        width: 100%;
+        padding-top: 48px;
+        background-color: #FFF;
+    }
+
+    .navi.open{
+        display: block;
+    }
+
+    .navi.close{
+        display: none;
+    }
+
+    .menu {
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu-item {
+        list-style-type: none;
+    }
+
+    .menu-button {
+        width: 100%;
+        height: 53px;
+        text-align: left;
+        padding: 0 0 0 48px;
+        display: block;
+        margin: 0;
+        border: 0;
+        font-size: 20px;
+        background-color: #FFF;
+        cursor: pointer;
+    }
+
+    .menu-button:focus {
+        font-weight: 700;
+    }
+
+    .header-button::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 56px;
+        height: 50px;
+        background-color: #FFF;
+        /* background-image: url(./images/btn-open.svg); */
+        background-repeat: no-repeat;
+        background-position: 50%, 50%;
+    }
+
+    .header-button.close::before{
+        background-image: url(./images/btn-close.svg);
+    }
+
+    .header-button.open::before{
+        background-image: url(./images/btn-open.svg);
+    }
+
+    .header-button {
+        font-size: 10px;
+        border: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+    }
+
+    .footer ul {
+        padding: 0;
+        margin: 32px 0 40px 0;
+    }
+
+
+    .footer-menu a {
+        font-size: 14px;
+        line-height: 20px;
+        color: #E0E0E0;
+        text-decoration: none;
+    }
+
+}
+
+/* PC 화면 */
+
+@media (min-width: 650px) {
+
+    .header {
+        width: 100%;
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .header-logo {
+        margin: 19px 0 19px 32px;
+        height: 50px;
+        line-height: 50px;
+        display: inline-block;
+    }
+
+    .menu {
+        width: 450px;
+    }
+
+    .menu-item {
+        list-style-type: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+
+    .menu-button:focus::after {
+        content: "";
+        display: block;
+        height: 2px;
+        background-color: #000;
+    }
+
+    .menu-button {
+        font-size: 16px;
+        border: 0;
+        background-color: #FFF;
+        cursor: pointer;
+    }
+
+    .header-button {
+        display: none;
+    }
+
+    .footer {
+        position: absolute;
+        top: 500px;
+    }
+
+    .company {
+        display: block;
+    }
+
+    .sns {
+        position: absolute;
+        display: flex;
+        bottom: 32px;
+        right: 42px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer-menu ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 32px;
+        right: 42px;
+    }
+
+    .footer-menu li {
+        display: block;
+    }
+
+    .footer-menu a {
+        text-decoration: none;
+        font-size: 12px;
+        color: #E0E0E0;
+        margin: 0 10px;
+        text-align: center;
+        display: block;
+        line-height: 12px;
+    }
+
+    .footer-menu li:nth-child(n+2) {
+        border-left: 1px solid #828282;
+    }
+}
